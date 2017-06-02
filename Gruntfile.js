@@ -12,6 +12,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-ng-constant');
+
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
@@ -36,7 +38,7 @@ module.exports = function (grunt) {
         },
         local: {
             options: {
-                dest: '<%= config.app %>/scripts/planning/planning.config.js',
+                dest: 'app/scripts/config.js',
             },
             constants: {
                 CONFIG: grunt.file.exists('config/local.config.json') ?
@@ -45,7 +47,7 @@ module.exports = function (grunt) {
         },
         test: {
             options: {
-                dest: '<%= config.app %>/scripts/planning/planning.config.js',
+                dest: 'app/scripts/config.js',
             },
             constants: {
                 CONFIG: grunt.file.readJSON('config/test.config.json')
@@ -53,7 +55,7 @@ module.exports = function (grunt) {
         },
         prod: {
             options: {
-                dest: '<%= config.app %>/scripts/planning/planning.config.js',
+                dest: 'app/scripts/config.js',
             },
             constants: {
                 CONFIG: grunt.file.readJSON('config/prod.config.json')
@@ -493,6 +495,7 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-ng-constant');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
