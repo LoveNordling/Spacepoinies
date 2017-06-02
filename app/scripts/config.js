@@ -2,6 +2,6 @@
 
 angular.module('config', [])
 
-.constant('CONFIG', {ENV:'local',API_URL:'http://localhost:80/'})
+.constant('CONFIG', {ENV:'local',API_URL:'http://localhost:3000/'})
 
 ;

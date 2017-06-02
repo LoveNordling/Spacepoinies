@@ -8,10 +8,19 @@
  * Controller of the spacePoniesApp
  */
 angular.module('spacePoniesApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+  .controller('MainCtrl', function ($scope) {
+    $scope.hej = "DIN PAPPA!!!";
+
+    $scope.myFunction = function() {
+        console.log("hej");
+    };
+
+    $scope.myArray = [
+      "tjena",
+      "hejdå",
+      "dinmamma",
+      "blaha"
     ];
+
+
   });
