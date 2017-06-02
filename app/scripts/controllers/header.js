@@ -9,13 +9,13 @@
  */
 angular.module('spacePoniesApp')
   .controller('HeaderCtrl', function ($scope, $rootScope, $http) {
-    $scope.user = {
+    $scope.userForm = {
       'username': '',
       'password': ''
     };
 
     $scope.login = function() {
-      $http.post(API_URL + '/login', $scope.user).then(function(res) {
+      $http.post(API_URL + '/login', $scope.userForm).then(function(res) {
         $rootScope.user = res;
         $rootScope.hasLoggedIn = true;
       });
