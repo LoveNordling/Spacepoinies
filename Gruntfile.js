@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 dest: '<%= config.app %>/scripts/planning/planning.config.js',
             },
             constants: {
-                CONFIG: grunt.file.readJSON('config/uat.config.json')
+                CONFIG: grunt.file.readJSON('config/test.config.json')
             }
         },
         prod: {
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                 dest: '<%= config.app %>/scripts/planning/planning.config.js',
             },
             constants: {
-                CONFIG: grunt.file.readJSON('config/production.config.json')
+                CONFIG: grunt.file.readJSON('config/prod.config.json')
             }
         }
     },
