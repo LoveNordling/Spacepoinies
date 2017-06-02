@@ -1,0 +1,4 @@
+{
+    "ENV": "test",
+    "API_URL": "http://localhost:80/"
+}
