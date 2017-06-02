@@ -20,7 +20,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="HeaderCtrl">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -34,6 +34,8 @@
 
             <a class="navbar-brand" href="#/">spacePonies</a>
           </div>
+
+          {{test}}
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
@@ -88,6 +90,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/test.js"></script>
+        <script src="scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
