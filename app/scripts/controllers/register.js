@@ -13,7 +13,8 @@ angular.module('spacePoniesApp')
 
     $scope.newUser = {
       "email": "",
-      "password": ""
+      "password": "",
+      "isCompany": false
     };
 
     $scope.registerNewUser = function() {
@@ -21,13 +22,18 @@ angular.module('spacePoniesApp')
       $http({
         method: 'POST',
         url: CONFIG.API_URL + 'register',
-        data: $scope.userForm,
+        data: $scope.newUser,
         headers: {'Content-Type': 'application/json'}
       }).then(function successCallback(response) {
         console.log(response)
 
         $rootScope.user = response.data;
         $rootScope.hasLoggedIn = true;
+
+        $scope.newUser = {
+          "email": "",
+          "password": ""
+        };
 
       }, function errorCallback(response) {
         let responseMessage = response.data.message;

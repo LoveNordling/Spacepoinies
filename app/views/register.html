@@ -7,11 +7,13 @@
 
 
   <div>
-    <input type="text" ng-model="newUser.email" ng-change="registerNewUser()">
-    <input type="password" ng-model="newUser.password">
+    <input type="text" placeholder="E-post" class="form-control" ng-model="newUser.email">
+    <input type="password" placeholder="lösenord" class="form-control" ng-model="newUser.password">
+
+    <input type="checkbox" id="isCompany" ng-model="newUser.isCompany"> <label for="isCompany">I am a company representative</label>
   </div>
 
-  <button ng-click="registerNewUser()">Register</button>
+  <button ng-click="registerNewUser()" class="btn btm-primary">Register</button>
 
 
 

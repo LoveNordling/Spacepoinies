@@ -9,8 +9,8 @@
  */
 angular.module('spacePoniesApp')
   .controller('HeaderCtrl', function ($scope, $rootScope, $http, CONFIG) {
-    $scope.userForm = {
-      'username': '',
+    $scope.loginForm = {
+      'email': '',
       'password': ''
     };
 
@@ -20,7 +20,7 @@ angular.module('spacePoniesApp')
       $http({
         method: 'POST',
         url: CONFIG.API_URL + 'login',
-        data: JSON.stringify($scope.userForm),
+        data: JSON.stringify($scope.loginForm),
         headers: {'Content-Type': 'application/json'}
       }).then(function successCallback(response) {
         console.log(response)
