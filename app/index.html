@@ -45,7 +45,8 @@
             <span ng-if="!$root.hasLoggedIn">
               <input class="form-control" type="text" ng-model="userForm.username" style="width: 200px; display: inline-block;">
               <input class="form-control" type="password" ng-model="userForm.password" style="width: 200px; display: inline-block;">
-              <button class="btn btn-primary" style="display: inline-block;" ng-click="login()">Logga in</button>
+              <button class="btn btn-primary" style="display: inline-block;" ng-click="login()">Log in</button>
+              <a ng-href="/#/register">Register</a>
             </span>
           </div>
         </div>
@@ -95,6 +96,7 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/test.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/controllers/register.js"></script>
         <!-- endbuild -->
 </body>
 </html>
