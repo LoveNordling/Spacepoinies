@@ -10,6 +10,7 @@
  */
 angular
   .module('spacePoniesApp', [
+    'config',
     'ngAnimate',
     'ngCookies',
     'ngResource',
