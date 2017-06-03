@@ -113,3 +113,33 @@ body {
 .left-align {
   text-align: left;
 }
+
+.amandas-really-bitchy-and-stupid-button-that-i-dont-understand {
+  width: 100px;
+  height: 100px;
+  z-index: 99;
+  margin-top: -200px;
+  margin-left: 50px;
+  position: absolute;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.amandas-really-bitchy-and-stupid-button-that-i-dont-understand:active {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.amandas-really-bitchy-and-stupid-button-that-i-dont-understand:focus {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+body.transform {
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+}
