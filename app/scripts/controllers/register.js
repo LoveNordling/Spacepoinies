@@ -8,7 +8,7 @@
  * Controller of the spacePoniesApp
  */
 angular.module('spacePoniesApp')
-  .controller('RegisterCtrl', function ($scope, $http, CONFIG, $rootScope) {
+  .controller('RegisterCtrl', function ($scope, $http, CONFIG, $rootScope, $location) {
     $scope.test = "hejhej";
 
     $scope.newUser = {
@@ -32,6 +32,12 @@ angular.module('spacePoniesApp')
 
         $scope.newUser.email = "";
         $scope.newUser.password = "";
+
+        if ($rootScope.user.isCompany) {
+          $location.path('#!/user');
+        } else {
+          $location.path('#!/company');
+        }
       }, function errorCallback(response) {
         let responseMessage = response.data.message;
 

@@ -8,9 +8,7 @@
  * Controller of the spacePoniesApp
  */
 angular.module('spacePoniesApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.hej = "DIN PAPPA!!!";
-
+  .controller('MainCtrl', function ($scope, $rootScope, $location) {
     $scope.myFunction = function() {
         console.log("hej");
     };
@@ -21,6 +19,4 @@ angular.module('spacePoniesApp')
       "dinmamma",
       "blaha"
     ];
-
-
   });
