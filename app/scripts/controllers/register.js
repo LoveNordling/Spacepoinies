@@ -34,9 +34,9 @@ angular.module('spacePoniesApp')
         $scope.newUser.password = "";
 
         if ($rootScope.user.isCompany) {
-          $location.path('#!/user');
+          $location.path('/user');
         } else {
-          $location.path('#!/company');
+          $location.path('/company');
         }
       }, function errorCallback(response) {
         let responseMessage = response.data.message;
