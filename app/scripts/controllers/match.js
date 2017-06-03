@@ -10,6 +10,4 @@
 angular.module('spacePoniesApp')
   .controller('MatchCtrl', function ($scope, $http, CONFIG, $rootScope) {
 
-
-
   });

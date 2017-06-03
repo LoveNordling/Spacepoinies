@@ -10,6 +10,4 @@
 angular.module('spacePoniesApp')
   .controller('BrowseCtrl', function ($scope, $http, CONFIG, $rootScope) {
 
-
-
   });
