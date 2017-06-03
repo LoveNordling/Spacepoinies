@@ -25,7 +25,6 @@ body {
 /* Custom page header */
 .header {
 
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -87,4 +86,30 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.stupid-div {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.stupid-image {
+  margin-top: -100px;
+}
+
+.skillarea {
+  font-weight: bold;
+}
+
+.skill {
+  margin-left: 10px;
+}
+
+.subskill {
+  margin-left: 20px;
+}
+
+.left-align {
+  text-align: left;
 }

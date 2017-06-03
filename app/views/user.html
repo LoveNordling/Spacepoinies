@@ -1,32 +1,22 @@
-<div>
-  <h1>User </h1>
+<div class="stupid-div">
+  <h1>User John Smith</h1>
 
-  <div class="col-xs-12">
+  <div class="left-align">
     Here you can choose what kind of technical skills you have
 
+    <div class="skillarea">Programming</div>
+    <div class="skill"><i class="glyphicon glyphicon-ok-sign"></i> PHP</div>
+    <div class="subskill"><i class="glyphicon glyphicon-ok-sign"></i> Laravel</div>
+    <div class="skill"><i class="glyphicon glyphicon-ok-sign"></i> JavaScript</div>
+    <div class="subskill"><i class="glyphicon glyphicon-ok-sign"></i> AngularJS</div>
+    <div class="subskill"><i class="glyphicon glyphicon-remove-sign"></i> React</div>
+    <div class="skill"><i class="glyphicon glyphicon-ok-sign"></i> HTML</div>
+    <div class="skill"><i class="glyphicon glyphicon-ok-sign"></i> CSS</div>
+    <div class="subskill"><i class="glyphicon glyphicon-remove-sign"></i> LESS</div>
+    <div class="subskill"><i class="glyphicon glyphicon-remove-sign"></i> SASS</div>
+    <div class="skillarea">Design</div>
+    <div class="skill"><i class="glyphicon glyphicon-remove-sign"></i> Adobe Indesign</div>
+    <div class="skill"><i class="glyphicon glyphicon-ok-sign"></i> MS Paint</div>
 
-    <div class="language" ng-repeat="language in $root.user track by $index">
-      <div>
-        Language
-      </div>
-      <span style="margin-left: 10px">
-        <input type="checkbox" ng-model="language.choosen" ng-change="checkChildren($index, language.choosen)">
-      </span>
-      <span style="margin-left: 10px">
-        {{language.name}}
-      </span>
-
-      <div ng-if="language.frameworks.length > 0 && language.choosen" style="margin-left: 10px">
-        Frameworks
-      </div>
-      <div class="framework" ng-if="language.frameworks.length > 0 && language.choosen" ng-repeat="framework in language.frameworks" style="margin-left: 10px">
-        <span style="margin-left: 10px">
-          <input type="checkbox" ng-model="framework.choosen">
-        </span>
-        <span style="margin-left: 10px">
-          {{framework.name}}
-        </span>
-      </div>
-    </div>
   </div>
 </div>
