@@ -33,7 +33,7 @@ angular.module('spacePoniesApp')
         $scope.newUser.email = "";
         $scope.newUser.password = "";
 
-        if ($rootScope.user.isCompany) {
+        if (!$rootScope.user.isCompany) {
           $location.path('/user');
         } else {
           $location.path('/company');
