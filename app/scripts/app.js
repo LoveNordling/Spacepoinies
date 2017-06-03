@@ -45,10 +45,20 @@ angular
         controller: 'UserCtrl',
         controllerAs: 'user'
       })
+      .when('/company', {
+        templateUrl: 'views/company.html',
+        controller: 'CompanyCtrl',
+        controllerAs: 'company'
+      })
       .when('/match', {
         templateUrl: 'views/match.html',
         controller: 'MatchCtrl',
         controllerAs: 'match'
+      })
+      .when('/browse', {
+        templateUrl: 'views/browse.html',
+        controller: 'BrowseCtrl',
+        controllerAs: 'browse'
       })
       .otherwise({
         redirectTo: '/'
