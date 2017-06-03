@@ -23,30 +23,18 @@ angular.module('spacePoniesApp')
         data: JSON.stringify($scope.userForm),
         headers: {'Content-Type': 'application/json'}
       }).then(function successCallback(response) {
-        // this callback will be called asynchronously
-        // when the response is available
-
         console.log(response)
-      }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-        console.log(response)
-      });
 
-      /*$http.post(CONFIG.API_URL, {'text':$scope.userForm.username}).success(function(res) {
-        console.log(res);
-      }).error(function(res) {
-        console.log(res);
-      });*/
-
-      /*$http.post(CONFIG.API_URL + 'login', $scope.userForm).success(function(res) {
-        console.log(res);
-
-        $rootScope.user = res;
+        $rootScope.user = response.data;
         $rootScope.hasLoggedIn = true;
-      }).error(function(res) {
-        console.log(res);
-      });*/
+
+      }, function errorCallback(response) {
+        let responseMessage = response.data.message;
+
+        if (responseMessage === 'USER_NOT_FOUND') {
+          alert("Login credentials not correct");
+        }
+      });
     };
 
     $scope.logout = function() {
