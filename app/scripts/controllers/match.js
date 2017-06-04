@@ -9,5 +9,9 @@
  */
 angular.module('spacePoniesApp')
   .controller('MatchCtrl', function ($scope, $http, CONFIG, $rootScope) {
+    $scope.clicked = false;
 
+    $scope.clickButton = function() {
+      $scope.clicked = true;
+    }
   });

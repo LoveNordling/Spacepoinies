@@ -1,3 +1,5 @@
-<div>
-	<img src="images/browse_page.svg" width="100%">
+<div class="stupid-div small">
+	<img src="images/matches_comp1_page.svg" width="100%" class="stupid-image" ng-if="!clicked">
+  <img src="images/matches_comp2_page.svg" width="100%" class="stupid-image" ng-if="clicked">
+  <button class="the-real-button" ng-click="clickButton()" ng-if="!clicked"></button>
 </div>

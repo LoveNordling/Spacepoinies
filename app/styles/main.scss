@@ -88,15 +88,25 @@ body {
   }
 }
 
+.stupid-image {
+  margin-top: -100px;
+}
+
 .stupid-div {
   width: 90%;
   text-align: center;
   margin: auto;
+
+  &.small {
+    width: 70%;
+
+    .stupid-image {
+      margin-top: -50px;
+    }
+  }
 }
 
-.stupid-image {
-  margin-top: -100px;
-}
+
 
 .skillarea {
   font-weight: bold;
@@ -151,4 +161,28 @@ body.transform {
 .users-buttons {
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+.the-real-button {
+  width: 465px;
+  height: 245px;
+  z-index: 99;
+  margin-top: -583px;
+  margin-left: -490px;
+  position: absolute;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.the-real-button:active {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.the-real-button:focus {
+  border: none;
+  background: none;
+  outline: none;
 }
