@@ -16,7 +16,7 @@ angular.module('spacePoniesApp')
         $scope.changed = true;
     }
 
-    $timeout(countUp, 200);
+    $timeout(countUp, 500);
 
 
     $scope.clickButton = function() {
