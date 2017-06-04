@@ -1,7 +1,11 @@
-<div class="stupid-div small">
-  <img src="images/a_waterproof_matches.png" width="100%" class="stupid-image" ng-if="!clicked && !changed">
-	<img src="images/a_matches_comp1_page.png" width="100%" class="stupid-image" ng-if="!clicked && changed">
-  <img src="images/a_matches_comp2_page.png" width="100%" class="stupid-image" ng-if="clicked && changed">
-  <button class="the-real-button" ng-click="clickButton()" ng-if="!clicked"></button>
-  <button class="the-real-button-two" ng-click="clickButtonTwo()" ng-if="clicked"></button>
+<div class="stupid-div small" ng-if="!$root.matchType || $root.matchType == 'comp'">
+  <img src="images/a_waterproof_matches.png" width="100%" class="stupid-image" ng-if="!$root.clicked && !changed">
+	<img src="images/a_matches_comp1_page.png" width="100%" class="stupid-image" ng-if="!$root.clicked && changed">
+  <img src="images/a_matches_comp2_page.png" width="100%" class="stupid-image" ng-if="$root.clicked && changed">
+  <button class="the-real-button" ng-click="clickButton()" ng-if="!$root.clicked"></button>
+  <button class="the-real-button-two" ng-click="clickButtonTwo()" ng-if="$root.clicked"></button>
+</div>
+
+<div class="stupid-div small" ng-if="$root.matchType == 'user'">
+  <img src="images/a_matches_user_page.png" width="100%" class="stupid-image">
 </div>

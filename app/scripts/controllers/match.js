@@ -9,7 +9,7 @@
  */
 angular.module('spacePoniesApp')
   .controller('MatchCtrl', function ($scope, $http, CONFIG, $rootScope, $location, $timeout) {
-    $scope.clicked = false;
+    $rootScope.clicked = false;
     $scope.changed = false;
 
     let countUp = function() {
@@ -20,7 +20,7 @@ angular.module('spacePoniesApp')
 
 
     $scope.clickButton = function() {
-      $scope.clicked = true;
+      $rootScope.clicked = true;
     }
 
     $scope.clickButtonTwo = function() {
