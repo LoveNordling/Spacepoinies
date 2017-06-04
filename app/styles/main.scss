@@ -186,3 +186,27 @@ body.transform {
   background: none;
   outline: none;
 }
+
+.the-real-button-two {
+  width: 295px;
+  height: 245px;
+  z-index: 99;
+  margin-top: -578px;
+  margin-left: -488px;
+  position: absolute;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.the-real-button-two:active {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.the-real-button-two:focus {
+  border: none;
+  background: none;
+  outline: none;
+}
